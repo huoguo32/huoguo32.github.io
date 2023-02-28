@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Huoguo32 Blog-自动化部署</title>
+    <title>Huoguo32 Blog-自动化部署-测试</title>
     <link>https://huoguo32.github.io/</link>
-    <description>Recent content on Huoguo32 Blog-自动化部署</description>
+    <description>Recent content on Huoguo32 Blog-自动化部署-测试</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://huoguo32.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>An Example Post</title>
+      <title>An Example实打实大时代 Post</title>
       <link>https://huoguo32.github.io/post/note/</link>
       <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
       
