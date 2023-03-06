@@ -6,7 +6,16 @@
     <description>Recent content on Huoguo32 Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://huoguo32.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://huoguo32.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>element图标按需加载失效/插槽图标.</title>
+      <link>https://huoguo32.github.io/post/element%E5%9B%BE%E6%A0%87%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E5%A4%B1%E6%95%88%E6%8F%92%E6%A7%BD%E5%9B%BE%E6%A0%87/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://huoguo32.github.io/post/element%E5%9B%BE%E6%A0%87%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E5%A4%B1%E6%95%88%E6%8F%92%E6%A7%BD%E5%9B%BE%E6%A0%87/</guid>
+      <description>今天在实现elementPlus自动导入图标发现导入的图标不会生效 解决链接:https://www.jianshu.com/p/232298</description>
+    </item>
+    
     <item>
       <title>An Example Post</title>
       <link>https://huoguo32.github.io/post/hello-world/</link>
@@ -23,15 +32,6 @@
       
       <guid>https://huoguo32.github.io/post/note/</guid>
       <description>生成笔记自动部署测试</description>
-    </item>
-    
-    <item>
-      <title>ceshi2</title>
-      <link>https://huoguo32.github.io/post/ceshi2/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://huoguo32.github.io/post/ceshi2/</guid>
-      <description>这是测试2</description>
     </item>
     
   </channel>

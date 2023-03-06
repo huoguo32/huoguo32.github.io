@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vue on Huoguo32 Blog</title>
+    <link>https://huoguo32.github.io/tags/vue/</link>
+    <description>Recent content in vue on Huoguo32 Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://huoguo32.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>element图标按需加载失效/插槽图标.</title>
+      <link>https://huoguo32.github.io/post/element%E5%9B%BE%E6%A0%87%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E5%A4%B1%E6%95%88%E6%8F%92%E6%A7%BD%E5%9B%BE%E6%A0%87/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://huoguo32.github.io/post/element%E5%9B%BE%E6%A0%87%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E5%A4%B1%E6%95%88%E6%8F%92%E6%A7%BD%E5%9B%BE%E6%A0%87/</guid>
+      <description>今天在实现elementPlus自动导入图标发现导入的图标不会生效 解决链接:https://www.jianshu.com/p/232298</description>
+    </item>
+    
+  </channel>
+</rss>

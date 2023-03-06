@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Tech" />
-    <meta property="og:title" content="Tech" />
-    <meta property="twitter:title" content="Tech" />
+    <meta name="title" content="element图标按需加载失效/插槽图标." />
+    <meta property="og:title" content="element图标按需加载失效/插槽图标." />
+    <meta property="twitter:title" content="element图标按需加载失效/插槽图标." />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="火锅32, 火锅32的网络日志, 火锅32的博客,  博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Tech | 火锅32的博客 | Zhaohuabing Blog</title>
+    <title>element图标按需加载失效/插槽图标. | 火锅32的博客 | Zhaohuabing Blog</title>
 
-    <link rel="canonical" href="/categories/tech/">
+    <link rel="canonical" href="/post/element%E5%9B%BE%E6%A0%87%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E5%A4%B1%E6%95%88%E6%8F%92%E6%A7%BD%E5%9B%BE%E6%A0%87/">
 
     
     
@@ -155,14 +155,53 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/home-bg-jeep.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/home-bg-jeep.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Huoguo32 Blog </h1>
-                    
-		    <span class="subheading">路在脚下，心向远方</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/%E9%AB%98%E5%BE%B7" title="高德">
+                            高德
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E5%9C%B0%E5%9B%BE" title="地图">
+                            地图
+                        </a>
+                        
+                        <a class="tag" href="/tags/vue" title="vue">
+                            vue
+                        </a>
+                        
+                        <a class="tag" href="/tags/elementplus" title="elementPlus">
+                            elementPlus
+                        </a>
+                        
+                    </div>
+                    <h1>element图标按需加载失效/插槽图标.</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     &#34;&#34;
+                             
+                            on 
+                            Monday, March 6, 2023
+                            
+                            
+                            
+                            
+                    </span>
                 </div>
             </div>
         </div>
@@ -171,240 +210,164 @@
 
 
 
-  
-<div data-pagefind-ignore="all" class="container">
-    <div class="row">
-        
-        
-   	    <div class="
-            col-lg-8 col-lg-offset-1
-            col-md-8 col-md-offset-1
-            col-sm-12
-            col-xs-12
-            post-container
-        ">
+
+<article>
+    <div class="container">
+        <div class="row">
+
             
-<div data-pagefind-ignore="all">
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-<div class="post-preview">
-    <a href="https://huoguo32.github.io/post/element%E5%9B%BE%E6%A0%87%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E5%A4%B1%E6%95%88%E6%8F%92%E6%A7%BD%E5%9B%BE%E6%A0%87/">
-        <h2 class="post-title">
-            element图标按需加载失效/插槽图标.
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            今天在实现elementPlus自动导入图标发现导入的图标不会生效 解决链接:https://www.jianshu.com/p/232298
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by      &#34;&#34; on Monday, March 6, 2023
-        
-        
-    
-    </p>
+                
+                <p>今天在实现elementPlus自动导入图标发现导入的图标不会生效
+解决链接:https://www.jianshu.com/p/23229850bb08
+关键在于,按着官网的描述写好后,发现导入的icon不生效
+​    <code>&lt;el-icon :size=&quot;size&quot; :color=&quot;color&quot;/&gt;</code>
+​    这样的写法是没用的
+​   <code>&lt;i-ep-edit&gt;&lt;/i-ep-edit&gt;</code>// 这样才会生效！！！
+​    但是需求是在el-input上面使用这个图标,所以需要用到插槽</p>
+<pre tabindex="0"><code>​    &lt;el-input placeholder=&#34;搜索文本框&#34;&gt;
+        &lt;template #suffix&gt;
+            &lt;i-ep-search&gt;&lt;/i-ep-search&gt;
+        &lt;/template&gt;
+​    &lt;/el-input&gt;
+</code></pre>
 
+                
+                
+<div class="entry-shang text-center">
+    
+	    <p>「真诚赞赏，手留余香」</p>
+	
+	<button class="zs show-zs btn btn-bred">赞赏支持</button>
 </div>
-<hr>
-
-<div class="post-preview">
-    <a href="https://huoguo32.github.io/post/hello-world/">
-        <h2 class="post-title">
-            An Example Post
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            测试第一篇blog
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by      &#34;&#34; on Monday, June 4, 2018
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><a href="https://huoguo32.github.io/"><img src="/img/favicon.png" />Huoguo32 Blog</a></span>
         
-        
-    
-    </p>
-
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="https://huoguo32.github.io/post/note/">
-        <h2 class="post-title">
-            An Example实打实大时代 Post
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            生成笔记自动部署测试
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by      &#34;&#34; on Monday, June 4, 2018
-        
-        
-    
-    </p>
-
-</div>
-<hr>
-
-</div>
-
-            
-
-
-
-       	</div>
-        
-
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-	
-    <section class="visible-md visible-lg">
-	
-        <div class="short-about">
-            
-            <a href="/about">
-               <img src="/img/zhaohuabing.png" alt="avatar" style="cursor: pointer" />
-            </a>
-            
-            
-                <p>Software Developer, Open Source Enthusiast and Life Adventurer</p>
-            
-           
-           <ul class="list-inline">
-               
-               <li>
-                   <a href="mailto:youremail@gmail.com">
-                      <span class="fa-stack fa-lg">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                      </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               
-               
-               <li>
-                   <a target="_blank" href="/your%20wechat%20qr%20code%20image">
-                       <span class="fa-stack fa-lg">
-                           <i class="fas fa-circle fa-stack-2x"></i>
-                           <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               <li>
-                   <a target="_blank" href="https://github.com/yourgithub">
-                       <span class="fa-stack fa-lg">
-                           <i class="fas fa-circle fa-stack-2x"></i>
-                           <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               <li>
-                   <a target="_blank" href="https://www.linkedin.com/in/yourlinkedinid">
-                       <span class="fa-stack fa-lg">
-                           <i class="fas fa-circle fa-stack-2x"></i>
-                           <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               
-                    <li>
-                        <a target="_blank" href="https://stackoverflow.com/users/yourstackoverflowid">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-            
-            
-            
-               
-               
-               
-               
-                </ul>
-            </div>
-    </section>
-	
-    
-    
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FEATURED TAGS</h5>
-        <div class="tags">
-            
-            
-               
-            
-               
-                    <a href="/tags/tag1" title="tag1">
-                        tag1
-                    </a>
-               
-            
-               
-                    <a href="/tags/tag2" title="tag2">
-                        tag2
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-        </div>
-    </section>
-    
-
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FRIENDS</h5>
-        <ul class="list-inline">
-            
-            <li><a target="_blank" href="https://zhaozhihan.com">Linda的博客</a></li>
-            
-        </ul>
-    </section>
-    
-    
-</div>
-
+	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
+		
+ 
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2元</button>
+			<button class="btn btn-blink" data-num="5">5元</button>
+			<button class="btn btn-blink" data-num="10">10元</button>
+			<button class="btn btn-blink" data-num="50">50元</button>
+			<button class="btn btn-blink" data-num="100">100元</button>
+			<button class="btn btn-blink" data-num="1">任意金额</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
+			<img src="/img/reward/wechat-2.png"  id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/img/reward/alipay-btn.png"/></span></label>
 	</div>
 </div>
+<script type="text/javascript" src="/js/reward.js"></script>
 
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/hello-world/" data-toggle="tooltip" data-placement="top" title="An Example Post">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+                
+
+                
+
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/tag1" title="tag1">
+                            tag1
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/tag2" title="tag2">
+                            tag2
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href="https://zhaozhihan.com">Linda的博客</a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
 
 
 
@@ -482,7 +445,7 @@
             
            
                    <li>
-                       <a href='/categories/tech/index.xml' rel="alternate" type="application/rss+xml" title="Huoguo32 Blog" >
+                       <a href='' rel="alternate" type="application/rss+xml" title="Huoguo32 Blog" >
                            <span class="fa-stack fa-lg">
                                <i class="fas fa-circle fa-stack-2x"></i>
                                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
