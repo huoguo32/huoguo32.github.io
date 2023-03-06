@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Huoguo32 Blog-测试自动化</title>
+    <title>Posts on Huoguo32 Blog</title>
     <link>https://huoguo32.github.io/post/</link>
-    <description>Recent content in Posts on Huoguo32 Blog-测试自动化</description>
+    <description>Recent content in Posts on Huoguo32 Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://huoguo32.github.io/post/index.xml" rel="self" type="application/rss+xml" />
@@ -17,12 +17,21 @@
     </item>
     
     <item>
-      <title>An Example Post</title>
+      <title>An Example实打实大时代 Post</title>
       <link>https://huoguo32.github.io/post/note/</link>
       <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://huoguo32.github.io/post/note/</guid>
       <description>生成笔记自动部署测试</description>
+    </item>
+    
+    <item>
+      <title>ceshi2</title>
+      <link>https://huoguo32.github.io/post/ceshi2/</link>
+      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://huoguo32.github.io/post/ceshi2/</guid>
+      <description>这是测试2</description>
     </item>
     
   </channel>
