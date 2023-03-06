@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="修改组件中的样式:v-deep" />
+    <meta property="og:title" content="修改组件中的样式:v-deep" />
+    <meta property="twitter:title" content="修改组件中的样式:v-deep" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="火锅32, 火锅32的网络日志, 火锅32的博客,  博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Categories | 火锅32的博客 | Zhaohuabing Blog</title>
+    <title>修改组件中的样式:v-deep | 火锅32的博客 | Zhaohuabing Blog</title>
 
-    <link rel="canonical" href="/categories/">
+    <link rel="canonical" href="/post/%E4%BF%AE%E6%94%B9%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84%E6%A0%B7%E5%BC%8Fv-deep/">
 
     
     
@@ -155,14 +155,53 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/home-bg-jeep.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/home-bg-jeep.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Huoguo32 Blog </h1>
-                    
-		    <span class="subheading">路在脚下，心向远方</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/%E7%BB%84%E4%BB%B6" title="组件">
+                            组件
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E6%A0%B7%E5%BC%8F" title="样式">
+                            样式
+                        </a>
+                        
+                        <a class="tag" href="/tags/vue" title="vue">
+                            vue
+                        </a>
+                        
+                        <a class="tag" href="/tags/elementplus" title="elementPlus">
+                            elementPlus
+                        </a>
+                        
+                    </div>
+                    <h1>修改组件中的样式:v-deep</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     &#34;&#34;
+                             
+                            on 
+                            Monday, March 6, 2023
+                            
+                            
+                            
+                            
+                    </span>
                 </div>
             </div>
         </div>
@@ -175,19 +214,146 @@
 <article>
     <div class="container">
         <div class="row">
+
             
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
 
-         	
+                
+                <p>element等组件库中的组件需要通过样式穿透修改.找到他们类名,一步步穿透下去
+你可以使用 ::v-deep 或者 /deep/ 来覆盖 Element Plus 组件的样式。这两种方式的作用相同，都可以用来穿透组件的作用域。具体来说，::v-deep 适用于单文件组件，而 /deep/ 适用于全局样式或者在单文件组件中的 style 标签中。下面是一个例子，展示如何使用 ::v-deep 来修改 el-input 的背景色：</p>
+<pre tabindex="0"><code>​ ::v-deep() {
+  .el-input {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100px;
+    height: 40px;
+    z-index: 999;
+    color: #fff;
+    font-size: 20px;
+    .el-input__wrapper {
+      height: 10px !important;
+      font-size: 5px;
+    }
+  }
+}
+</code></pre><p>chatGPT的回答,但测试发现还是上面的格式才会生效</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">template</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">el-input</span> <span style="color:#ff79c6">v-model</span><span style="color:#f1fa8c">=&#34;inputValue&#34;</span>&gt;&lt;/<span style="color:#50fa7b">el</span><span style="color:#ff79c6">-input</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span> <span style="color:#50fa7b">scoped</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* 在单文件组件中使用 ::v-deep */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">::</span>v<span style="color:#ff79c6">-</span>deep .el<span style="color:#ff79c6">-</span>input__inner {
+</span></span><span style="display:flex;"><span>  background<span style="color:#ff79c6">-</span>color<span style="color:#ff79c6">:</span> #f0f0f0;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span></code></pre></div><p>如果你想全局修改 Element Plus 的样式，你可以在 <code>main.js</code> 中引入一个样式文件，然后在这个文件中使用 <code>/deep/</code> 来修改组件样式。比如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#6272a4">/* global.css */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* 修改 el-input 的背景色 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">/</span><span style="color:#ff79c6">deep</span><span style="color:#ff79c6">/</span> .<span style="color:#50fa7b">el-input__inner</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#f0f0f0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#6272a4">// main.js
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> { createApp } from <span style="color:#f1fa8c">&#39;vue&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> App from <span style="color:#f1fa8c">&#39;./App.vue&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#39;element-plus/packages/theme-chalk/src/base.scss&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#39;./styles/global.css&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> app <span style="color:#ff79c6">=</span> createApp(App)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.mount(<span style="color:#f1fa8c">&#39;#app&#39;</span>)
+</span></span></code></pre></div><p>注意，使用 <code>/deep/</code> 或者 <code>::v-deep</code> 覆盖组件样式可能会影响其他组件，所以最好是在局部范围内使用。此外，为了确保样式能够生效，你需要在组件外层包裹一个具有一定样式的父容器，比如一个 div。如果直接在组件上添加样式，可能会被 Element Plus 的样式所覆盖，导致修改无效。</p>
+
+
+                
+                
+<div class="entry-shang text-center">
+    
+	    <p>「真诚赞赏，手留余香」</p>
+	
+	<button class="zs show-zs btn btn-bred">赞赏支持</button>
+</div>
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><a href="https://huoguo32.github.io/"><img src="/img/favicon.png" />Huoguo32 Blog</a></span>
+        
+	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
+		
+ 
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2元</button>
+			<button class="btn btn-blink" data-num="5">5元</button>
+			<button class="btn btn-blink" data-num="10">10元</button>
+			<button class="btn btn-blink" data-num="50">50元</button>
+			<button class="btn btn-blink" data-num="100">100元</button>
+			<button class="btn btn-blink" data-num="1">任意金额</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
+			<img src="/img/reward/wechat-2.png"  id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/img/reward/alipay-btn.png"/></span></label>
+	</div>
+</div>
+<script type="text/javascript" src="/js/reward.js"></script>
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/hello-world/" data-toggle="tooltip" data-placement="top" title="hello world">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/element%E5%9B%BE%E6%A0%87%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E5%A4%B1%E6%95%88%E6%8F%92%E6%A7%BD%E5%9B%BE%E6%A0%87/" data-toggle="tooltip" data-placement="top" title="element图标按需加载失效/插槽图标.">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
                 
 
 
 
-
             </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
             
             <div class="
                 col-lg-8 col-lg-offset-2
@@ -204,25 +370,25 @@
                         
                         
                         <a href="/tags/elementplus" title="elementplus">
-                        elementplus
+                            elementplus
                         </a>
                         
                         
                         
                         <a href="/tags/tag1" title="tag1">
-                        tag1
+                            tag1
                         </a>
                         
                         
                         
                         <a href="/tags/tag2" title="tag2">
-                        tag2
+                            tag2
                         </a>
                         
                         
                         
                         <a href="/tags/vue" title="vue">
-                        vue
+                            vue
                         </a>
                         
                         
@@ -331,7 +497,7 @@
             
            
                    <li>
-                       <a href='/categories/index.xml' rel="alternate" type="application/rss+xml" title="Huoguo32 Blog" >
+                       <a href='' rel="alternate" type="application/rss+xml" title="Huoguo32 Blog" >
                            <span class="fa-stack fa-lg">
                                <i class="fas fa-circle fa-stack-2x"></i>
                                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>

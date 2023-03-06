@@ -16,5 +16,14 @@
       <description>今天在实现elementPlus自动导入图标发现导入的图标不会生效 解决链接:https://www.jianshu.com/p/232298</description>
     </item>
     
+    <item>
+      <title>修改组件中的样式:v-deep</title>
+      <link>https://huoguo32.github.io/post/%E4%BF%AE%E6%94%B9%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84%E6%A0%B7%E5%BC%8Fv-deep/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://huoguo32.github.io/post/%E4%BF%AE%E6%94%B9%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84%E6%A0%B7%E5%BC%8Fv-deep/</guid>
+      <description>element等组件库中的组件需要通过样式穿透修改.找到他们类名,一步步穿透下去 你可以使用 ::v-deep 或者 /deep/ 来覆盖 Element Plus 组件的样式。这两种方式的作用相同</description>
+    </item>
+    
   </channel>
 </rss>
