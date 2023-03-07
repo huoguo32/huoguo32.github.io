@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图片上传 on Huoguo32 Blog</title>
+    <link>https://huoguo32.github.io/tags/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/</link>
+    <description>Recent content in 图片上传 on Huoguo32 Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://huoguo32.github.io/tags/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>测试图片上传</title>
+      <link>https://huoguo32.github.io/post/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://huoguo32.github.io/post/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/</guid>
+      <description>贴一个图片地址看能否上传成功</description>
+    </item>
+    
+  </channel>
+</rss>
