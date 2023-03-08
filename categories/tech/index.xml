@@ -6,7 +6,34 @@
     <description>Recent content in Tech on Huoguo32 Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://huoguo32.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://huoguo32.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>element Autocomplete组件下拉框无法渲染</title>
+      <link>https://huoguo32.github.io/post/element-autocomplete%E7%BB%84%E4%BB%B6%E4%B8%8B%E6%8B%89%E6%A1%86%E6%97%A0%E6%B3%95%E6%B8%B2%E6%9F%93/</link>
+      <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://huoguo32.github.io/post/element-autocomplete%E7%BB%84%E4%BB%B6%E4%B8%8B%E6%8B%89%E6%A1%86%E6%97%A0%E6%B3%95%E6%B8%B2%E6%9F%93/</guid>
+      <description>element的Autocomplete组件下拉框无法渲染,但是输入框可以正常输入,并有数据,查阅资料显示 const querySearchAsync = (queryStr, cb) =&amp;gt; { placeSearch.search(queryStr, (status, result) =&amp;gt; { // console.log(status, result) if (status</description>
+    </item>
+    
+    <item>
+      <title>element Autocomplete组件样式修改</title>
+      <link>https://huoguo32.github.io/post/element-autocomplete%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9/</link>
+      <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://huoguo32.github.io/post/element-autocomplete%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9/</guid>
+      <description>element的Autocomplete组件下拉框样式无法直接修改.查阅资料后发现需要先取消掉中的scope.然后再在style中找到相应的</description>
+    </item>
+    
+    <item>
+      <title>高德显示xxx is not a construct </title>
+      <link>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%98%BE%E7%A4%BAxxx-is-not-a-construct-/</link>
+      <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%98%BE%E7%A4%BAxxx-is-not-a-construct-/</guid>
+      <description>高德在vue中常见的的组件加载问题,xxx组件is not a constructor 在创建高德地图时引入插件.有时候会没用.网上说的引入sdk的方法也不适用于vue 解决</description>
+    </item>
+    
     <item>
       <title>文字超出后换行(小程序)</title>
       <link>https://huoguo32.github.io/post/%E6%96%87%E5%AD%97%E8%B6%85%E5%87%BA%E5%90%8E%E6%8D%A2%E8%A1%8C%E5%B0%8F%E7%A8%8B%E5%BA%8F-copy/</link>

@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="element Autocomplete组件下拉框无法渲染" />
+    <meta property="og:title" content="element Autocomplete组件下拉框无法渲染" />
+    <meta property="twitter:title" content="element Autocomplete组件下拉框无法渲染" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="火锅32, 火锅32的网络日志, 火锅32的博客,  博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Tags | huoguo32 Blog</title>
+    <title>element Autocomplete组件下拉框无法渲染 | huoguo32 Blog</title>
 
-    <link rel="canonical" href="/tags/">
+    <link rel="canonical" href="/post/element-autocomplete%E7%BB%84%E4%BB%B6%E4%B8%8B%E6%8B%89%E6%A1%86%E6%97%A0%E6%B3%95%E6%B8%B2%E6%9F%93/">
 
     
     
@@ -155,14 +155,53 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/home-bg-jeep.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/home-bg-jeep.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Huoguo32 Blog </h1>
-                    
-		    <span class="subheading">路在脚下，心向远方</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/autocomplete" title="Autocomplete">
+                            Autocomplete
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E6%A0%B7%E5%BC%8F" title="样式">
+                            样式
+                        </a>
+                        
+                        <a class="tag" href="/tags/vue" title="vue">
+                            vue
+                        </a>
+                        
+                        <a class="tag" href="/tags/element" title="element">
+                            element
+                        </a>
+                        
+                    </div>
+                    <h1>element Autocomplete组件下拉框无法渲染</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     &#34;huoguo32&#34;
+                             
+                            on 
+                            Wednesday, March 8, 2023
+                            
+                            
+                            
+                            
+                    </span>
                 </div>
             </div>
         </div>
@@ -175,19 +214,126 @@
 <article>
     <div class="container">
         <div class="row">
+
             
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
 
-         	
+                
+                <p>element的Autocomplete组件下拉框无法渲染,但是输入框可以正常输入,并有数据,查阅资料显示</p>
+<pre tabindex="0"><code>  const querySearchAsync = (queryStr, cb) =&gt; {
+   
+      placeSearch.search(queryStr, (status, result) =&gt; {
+        // console.log(status, result)
+        if (status === &#39;complete&#39;) {
+          searchResult.value = result.poiList.pois
+          cb(searchResult.value)
+        }
+      })
+    }
+</code></pre><p>如果el-autocomplete接受的数组对象里面没有value属性，就需要用value-key（输入建议对象中用于显示的键名）可以指定对应的key，如果不用value-key,那就需要处理数组，给数组加上一个value的key，要不然输入建议显示不出来，如下图</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vue" data-lang="vue"><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">el-autocomplete</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#50fa7b">v</span><span style="color:#ff79c6">-model</span>=&#34;<span style="color:#50fa7b">inputValue</span>&#34;
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">:fetch-suggestions</span><span style="color:#f1fa8c">=&#34;querySearchAsync&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#50fa7b">placeholder</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;请输入关键词&#34;</span>
+</span></span><span style="display:flex;"><span>      //因为请求回来的数据是数组对象,所以取每个对象中的<span style="color:#50fa7b">name</span>值,这样下拉就会渲染<span style="color:#50fa7b">name</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#50fa7b">value</span><span style="color:#ff79c6">-key</span>=&#34;<span style="color:#50fa7b">name</span>&#34;
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">:trigger-on-focus</span><span style="color:#f1fa8c">=&#34;false&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#50fa7b">popper</span><span style="color:#ff79c6">-class</span>=&#34;<span style="color:#50fa7b">autocompletePopper</span>&#34;
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">:popper-append-to-body</span><span style="color:#f1fa8c">=&#34;false&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">@select</span><span style="color:#f1fa8c">=&#34;handleSelect&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;my-autocomplete&#34;</span>
+</span></span><span style="display:flex;"><span>    &gt;<span style="color:#ff79c6">&lt;</span>/el-autocomplete&gt;
+</span></span></code></pre></div><p>
+  <img src="https://raw.githubusercontent.com/huoguo32/blog-image/main/image-20230308194259941.png" alt="image-20230308194259941">
+
+这个 <code>value-key</code> 属性的默认值是 value，你的键名不一定是叫value，改成你自己对应的就可以了</p>
+<p>
+  <img src="https://raw.githubusercontent.com/huoguo32/blog-image/main/image-20230308194356959.png" alt="image-20230308194356959">
+
+</p>
+
+
+                
+                
+<div class="entry-shang text-center">
+    
+	    <p>「真诚赞赏，手留余香」</p>
+	
+	<button class="zs show-zs btn btn-bred">赞赏支持</button>
+</div>
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><a href="https://huoguo32.github.io/"><img src="/img/favicon.png" />Huoguo32 Blog</a></span>
+        
+	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
+		
+ 
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2元</button>
+			<button class="btn btn-blink" data-num="5">5元</button>
+			<button class="btn btn-blink" data-num="10">10元</button>
+			<button class="btn btn-blink" data-num="50">50元</button>
+			<button class="btn btn-blink" data-num="100">100元</button>
+			<button class="btn btn-blink" data-num="1">任意金额</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
+			<img src="/img/reward/wechat-2.png"  id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/img/reward/alipay-btn.png"/></span></label>
+	</div>
+</div>
+<script type="text/javascript" src="/js/reward.js"></script>
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/element-autocomplete%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9/" data-toggle="tooltip" data-placement="top" title="element Autocomplete组件样式修改">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+                
+
                 
 
 
 
-
             </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
             
             <div class="
                 col-lg-8 col-lg-offset-2
@@ -204,7 +350,7 @@
                         
                         
                         <a href="/tags/autocomplete" title="autocomplete">
-                        autocomplete
+                            autocomplete
                         </a>
                         
                         
@@ -212,7 +358,7 @@
                         
                         
                         <a href="/tags/element" title="element">
-                        element
+                            element
                         </a>
                         
                         
@@ -220,19 +366,19 @@
                         
                         
                         <a href="/tags/tag1" title="tag1">
-                        tag1
+                            tag1
                         </a>
                         
                         
                         
                         <a href="/tags/tag2" title="tag2">
-                        tag2
+                            tag2
                         </a>
                         
                         
                         
                         <a href="/tags/vue" title="vue">
-                        vue
+                            vue
                         </a>
                         
                         
@@ -244,7 +390,7 @@
                         
                         
                         <a href="/tags/%E6%A0%B7%E5%BC%8F" title="样式">
-                        样式
+                            样式
                         </a>
                         
                         
@@ -254,7 +400,7 @@
                         
                         
                         <a href="/tags/%E9%AB%98%E5%BE%B7" title="高德">
-                        高德
+                            高德
                         </a>
                         
                         
@@ -355,7 +501,7 @@
             
            
                    <li>
-                       <a href='/tags/index.xml' rel="alternate" type="application/rss+xml" title="Huoguo32 Blog" >
+                       <a href='' rel="alternate" type="application/rss+xml" title="Huoguo32 Blog" >
                            <span class="fa-stack fa-lg">
                                <i class="fas fa-circle fa-stack-2x"></i>
                                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
