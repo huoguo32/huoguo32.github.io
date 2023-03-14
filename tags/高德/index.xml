@@ -27,10 +27,10 @@
     
     <item>
       <title>高德显示xxx is not a construct </title>
-      <link>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%98%BE%E7%A4%BAxxx-is-not-a-construct-/</link>
+      <link>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%98%BE%E7%A4%BAxxx-is-not-a-construct-copy/</link>
       <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%98%BE%E7%A4%BAxxx-is-not-a-construct-/</guid>
+      <guid>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%98%BE%E7%A4%BAxxx-is-not-a-construct-copy/</guid>
       <description>高德在vue中常见的的组件加载问题,xxx组件is not a constructor 在创建高德地图时引入插件.有时候会没用.网上说的引入sdk的方法也不适用于vue 解决</description>
     </item>
     
