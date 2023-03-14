@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>高德渲染图标概率性报错(不显示)</title>
+      <link>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%B8%B2%E6%9F%93%E5%9B%BE%E6%A0%87%E6%A6%82%E7%8E%87%E6%80%A7%E6%8A%A5%E9%94%99%E4%B8%8D%E6%98%BE%E7%A4%BA/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%B8%B2%E6%9F%93%E5%9B%BE%E6%A0%87%E6%A6%82%E7%8E%87%E6%80%A7%E6%8A%A5%E9%94%99%E4%B8%8D%E6%98%BE%E7%A4%BA/</guid>
+      <description>新汴河大屏项目.发现根据请求数据加载网络点位时,有的时候能顺利加载点位,有的时候无法加载 打印加载失败的报错信息,发现都是通知AMap is not defined. c</description>
+    </item>
+    
+    <item>
       <title>高德显示xxx is not a construct </title>
       <link>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%98%BE%E7%A4%BAxxx-is-not-a-construct-/</link>
       <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>

@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Tech" />
-    <meta property="og:title" content="Tech" />
-    <meta property="twitter:title" content="Tech" />
+    <meta name="title" content="高德渲染图标概率性报错(不显示)" />
+    <meta property="og:title" content="高德渲染图标概率性报错(不显示)" />
+    <meta property="twitter:title" content="高德渲染图标概率性报错(不显示)" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="火锅32, 火锅32的网络日志, 火锅32的博客,  博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Tech | huoguo32 Blog</title>
+    <title>高德渲染图标概率性报错(不显示) | huoguo32 Blog</title>
 
-    <link rel="canonical" href="/categories/tech/">
+    <link rel="canonical" href="/post/%E9%AB%98%E5%BE%B7%E6%B8%B2%E6%9F%93%E5%9B%BE%E6%A0%87%E6%A6%82%E7%8E%87%E6%80%A7%E6%8A%A5%E9%94%99%E4%B8%8D%E6%98%BE%E7%A4%BA/">
 
     
     
@@ -155,14 +155,45 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/home-bg-jeep.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/home-bg-jeep.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Huoguo32 Blog </h1>
-                    
-		    <span class="subheading">路在脚下，心向远方</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/%E9%AB%98%E5%BE%B7" title="高德">
+                            高德
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E5%9C%B0%E5%9B%BE" title="地图">
+                            地图
+                        </a>
+                        
+                    </div>
+                    <h1>高德渲染图标概率性报错(不显示)</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     &#34;&#34;
+                             
+                            on 
+                            Tuesday, March 14, 2023
+                            
+                            
+                            
+                            
+                    </span>
                 </div>
             </div>
         </div>
@@ -171,274 +202,238 @@
 
 
 
-  
-<div data-pagefind-ignore="all" class="container">
-    <div class="row">
-        
-        
-   	    <div class="
-            col-lg-8 col-lg-offset-1
-            col-md-8 col-md-offset-1
-            col-sm-12
-            col-xs-12
-            post-container
-        ">
+
+<article>
+    <div class="container">
+        <div class="row">
+
             
-<div data-pagefind-ignore="all">
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-<div class="post-preview">
-    <a href="https://huoguo32.github.io/post/hello-world/">
-        <h2 class="post-title">
-            hello world
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            测试第一篇blog
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by      &#34;&#34; on Monday, June 4, 2018
-        
-        
-    
-    </p>
+                
+                <p>新汴河大屏项目.发现根据请求数据加载网络点位时,有的时候能顺利加载点位,有的时候无法加载</p>
+<p>打印加载失败的报错信息,发现都是通知AMap is not defined.</p>
+<p>
+  <img src="https://raw.githubusercontent.com/huoguo32/blog-image/main/Snipaste_2023-03-14_14-15-37.png" alt="Snipaste_2023-03-14_14-15-37">
 
+</p>
+<p>chatGPT解决方案:</p>
+<p>根据你提供的信息，&ldquo;AMap is not defined&rdquo; 这个错误通常意味着在加载图标之前，AMap JavaScript API 尚未完全加载完成，导致相应的 JavaScript 对象没有被正确地定义。</p>
+<p>为了解决这个问题，你可以尝试以下几个步骤：</p>
+<ol>
+<li>
+<p>确保在加载图标之前，AMap JavaScript API 已经被完全加载。你可以在控制台中输入 <code>AMap</code> 命令，检查是否已经成功加载。</p>
+</li>
+<li>
+<p>如果确信 AMap API 已经加载，你可以考虑使用回调函数，确保加载完成后再加载图标。例如：</p>
+</li>
+<li>
+<p>如果以上两个步骤均无效，你可以尝试延迟加载图标，等待 AMap JavaScript API 加载完成后再加载。例如：</p>
+<p>(最终采用方法三解决,如果AMap的值不是undifined,再执行请求数据渲染点位的函数)</p>
+</li>
+</ol>
+<pre tabindex="0"><code>// 等待 AMap JavaScript API 加载完成后，再加载图标
+function loadMarker() {
+  if (typeof AMap !== &#39;undefined&#39;) {
+    // 加载图标
+    // ...
+  } else {
+    setTimeout(loadMarker, 100);
+  }
+}
+
+// 开始加载图标
+loadMarker();
+</code></pre>
+
+                
+                
+<div class="entry-shang text-center">
+    
+	    <p>「真诚赞赏，手留余香」</p>
+	
+	<button class="zs show-zs btn btn-bred">赞赏支持</button>
 </div>
-<hr>
-
-<div class="post-preview">
-    <a href="https://huoguo32.github.io/post/note/">
-        <h2 class="post-title">
-            笔记
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            生成笔记自动部署测试
-       
-        </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by      &#34;&#34; on Monday, June 4, 2018
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><a href="https://huoguo32.github.io/"><img src="/img/favicon.png" />Huoguo32 Blog</a></span>
         
-        
-    
-    </p>
-
-</div>
-<hr>
-
-</div>
-
-            
-
-
-<ul class="pager" data-pagefind-ignore="all">
-    
-    <li class="previous">
-        <a href="/categories/tech/page/2/">&larr; Newer Posts</a>
-    </li>
-    
-    
-</ul>
-
-
-       	</div>
-        
-
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-	
-    <section class="visible-md visible-lg">
-	
-        <div class="short-about">
-            
-            <a href="/about">
-               <img src="/img/zhaohuabing.png" alt="avatar" style="cursor: pointer" />
-            </a>
-            
-            
-                <p>Software Developer, Open Source Enthusiast and Life Adventurer</p>
-            
-           
-           <ul class="list-inline">
-               
-               <li>
-                   <a href="mailto:youremail@gmail.com">
-                      <span class="fa-stack fa-lg">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                      </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               
-               
-               <li>
-                   <a target="_blank" href="/your%20wechat%20qr%20code%20image">
-                       <span class="fa-stack fa-lg">
-                           <i class="fas fa-circle fa-stack-2x"></i>
-                           <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               <li>
-                   <a target="_blank" href="https://github.com/yourgithub">
-                       <span class="fa-stack fa-lg">
-                           <i class="fas fa-circle fa-stack-2x"></i>
-                           <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               <li>
-                   <a target="_blank" href="https://www.linkedin.com/in/yourlinkedinid">
-                       <span class="fa-stack fa-lg">
-                           <i class="fas fa-circle fa-stack-2x"></i>
-                           <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               
-                    <li>
-                        <a target="_blank" href="https://stackoverflow.com/users/yourstackoverflowid">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-            
-            
-            
-               
-               
-               
-               
-                </ul>
-            </div>
-    </section>
-	
-    
-    
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FEATURED TAGS</h5>
-        <div class="tags">
-            
-            
-               
-                    <a href="/tags/autocomplete" title="autocomplete">
-                        autocomplete
-                    </a>
-               
-            
-               
-            
-               
-                    <a href="/tags/element" title="element">
-                        element
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-               
-                    <a href="/tags/tag1" title="tag1">
-                        tag1
-                    </a>
-               
-            
-               
-                    <a href="/tags/tag2" title="tag2">
-                        tag2
-                    </a>
-               
-            
-               
-                    <a href="/tags/vue" title="vue">
-                        vue
-                    </a>
-               
-            
-               
-            
-               
-                    <a href="/tags/%E5%9C%B0%E5%9B%BE" title="地图">
-                        地图
-                    </a>
-               
-            
-               
-            
-               
-                    <a href="/tags/%E6%A0%B7%E5%BC%8F" title="样式">
-                        样式
-                    </a>
-               
-            
-               
-            
-               
-                    <a href="/tags/%E7%BB%84%E4%BB%B6" title="组件">
-                        组件
-                    </a>
-               
-            
-               
-                    <a href="/tags/%E9%AB%98%E5%BE%B7" title="高德">
-                        高德
-                    </a>
-               
-            
-        </div>
-    </section>
-    
-
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FRIENDS</h5>
-        <ul class="list-inline">
-            
-            <li><a target="_blank" href="https://zhaozhihan.com">Linda的博客</a></li>
-            
-        </ul>
-    </section>
-    
-    
-</div>
-
+	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
+		
+ 
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2元</button>
+			<button class="btn btn-blink" data-num="5">5元</button>
+			<button class="btn btn-blink" data-num="10">10元</button>
+			<button class="btn btn-blink" data-num="50">50元</button>
+			<button class="btn btn-blink" data-num="100">100元</button>
+			<button class="btn btn-blink" data-num="1">任意金额</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
+			<img src="/img/reward/wechat-2.png"  id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/img/reward/alipay-btn.png"/></span></label>
 	</div>
 </div>
+<script type="text/javascript" src="/js/reward.js"></script>
 
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/element-autocomplete%E7%BB%84%E4%BB%B6%E4%B8%8B%E6%8B%89%E6%A1%86%E6%97%A0%E6%B3%95%E6%B8%B2%E6%9F%93/" data-toggle="tooltip" data-placement="top" title="element Autocomplete组件下拉框无法渲染">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/provide%E5%8F%AA%E8%83%BD%E7%94%A8%E4%BA%8E%E7%88%B7%E4%BC%A0%E5%AD%99%E4%B8%8D%E8%83%BD%E7%94%A8%E4%BA%8E%E5%85%84%E5%BC%9F%E7%BB%84%E4%BB%B6/" data-toggle="tooltip" data-placement="top" title="provide只能用于爷传孙,不能用于兄弟组件">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/autocomplete" title="autocomplete">
+                            autocomplete
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/element" title="element">
+                            element
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/tag1" title="tag1">
+                            tag1
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/tag2" title="tag2">
+                            tag2
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/vue" title="vue">
+                            vue
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E5%9C%B0%E5%9B%BE" title="地图">
+                            地图
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E6%A0%B7%E5%BC%8F" title="样式">
+                            样式
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E7%BB%84%E4%BB%B6" title="组件">
+                            组件
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E9%AB%98%E5%BE%B7" title="高德">
+                            高德
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href="https://zhaozhihan.com">Linda的博客</a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
 
 
 
@@ -516,7 +511,7 @@
             
            
                    <li>
-                       <a href='/categories/tech/index.xml' rel="alternate" type="application/rss+xml" title="Huoguo32 Blog" >
+                       <a href='' rel="alternate" type="application/rss+xml" title="Huoguo32 Blog" >
                            <span class="fa-stack fa-lg">
                                <i class="fas fa-circle fa-stack-2x"></i>
                                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
