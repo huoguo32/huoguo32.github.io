@@ -3,10 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://huoguo32.github.io/categories/</loc>
-    <lastmod>2023-03-14T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://huoguo32.github.io/</loc>
-    <lastmod>2023-03-14T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huoguo32.github.io/post/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huoguo32.github.io/tags/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huoguo32.github.io/categories/tech/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huoguo32.github.io/tags/vue/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huoguo32.github.io/tags/%E9%AB%98%E5%BE%B7/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%98%BE%E7%A4%BAamap-is-not-defined/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://huoguo32.github.io/tags/pinia/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
@@ -14,28 +32,13 @@
     <loc>https://huoguo32.github.io/post/pinia%E5%8F%AA%E8%83%BD%E5%AD%98%E5%82%A8vue%E6%95%B0%E6%8D%AE%E6%88%96%E6%96%B9%E6%B3%95-copy/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://huoguo32.github.io/post/</loc>
-    <lastmod>2023-03-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://huoguo32.github.io/post/provide%E5%8F%AA%E8%83%BD%E7%94%A8%E4%BA%8E%E7%88%B7%E4%BC%A0%E5%AD%99%E4%B8%8D%E8%83%BD%E7%94%A8%E4%BA%8E%E5%85%84%E5%BC%9F%E7%BB%84%E4%BB%B6/</loc>
-    <lastmod>2023-03-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://huoguo32.github.io/tags/</loc>
-    <lastmod>2023-03-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://huoguo32.github.io/categories/tech/</loc>
-    <lastmod>2023-03-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://huoguo32.github.io/tags/vue/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://huoguo32.github.io/tags/%E5%9C%B0%E5%9B%BE/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://huoguo32.github.io/tags/%E7%BB%84%E4%BB%B6/</loc>
-    <lastmod>2023-03-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://huoguo32.github.io/tags/%E9%AB%98%E5%BE%B7/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%B8%B2%E6%9F%93%E5%9B%BE%E6%A0%87%E6%A6%82%E7%8E%87%E6%80%A7%E6%8A%A5%E9%94%99%E4%B8%8D%E6%98%BE%E7%A4%BA/</loc>

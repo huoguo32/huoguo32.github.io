@@ -6,7 +6,16 @@
     <description>Recent content in vue on Huoguo32 Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://huoguo32.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://huoguo32.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>高德显示AMap is not defined</title>
+      <link>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%98%BE%E7%A4%BAamap-is-not-defined/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://huoguo32.github.io/post/%E9%AB%98%E5%BE%B7%E6%98%BE%E7%A4%BAamap-is-not-defined/</guid>
+      <description>高德在vue中常见的的组件加载问题,AMap is not defined,直接这么写会报错, const districtSearch = new AMap.DistrictSearch({ subdistrict: 1, extensions: &amp;#39;all&amp;#39;, level: &amp;#39;city&amp;#39;, showbiz: false, city }) districtSearch.search(city, (status, result) =&amp;gt; { console.log(city, status, result) if (status === &amp;#39;complete&amp;#39;) { districtList.value</description>
+    </item>
+    
     <item>
       <title>pinia只能存储vue数据或方法</title>
       <link>https://huoguo32.github.io/post/pinia%E5%8F%AA%E8%83%BD%E5%AD%98%E5%82%A8vue%E6%95%B0%E6%8D%AE%E6%88%96%E6%96%B9%E6%B3%95-copy/</link>
